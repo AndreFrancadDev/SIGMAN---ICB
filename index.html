@@ -1,35 +1,69 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>SIGMAN ICB/UPE</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIGMAN - ICB/UPE</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>SIGMAN</h1>
-  <h2>Sistema Integrado de Gestão de Manutenção</h2>
 
-  <form>
-    <label>Setor:</label>
-    <input type="text" placeholder="Ex: Coordenação, Sala 12, Laboratório">
+    <header>
+        <h1>SIGMAN</h1>
+        <p>Sistema Integrado de Gestão de Manutenção</p>
+        <p>Instituto de Ciências Biológicas - UPE</p>
+    </header>
 
-    <label>Tipo de problema:</label>
-    <select>
-      <option>Elétrica</option>
-      <option>Hidráulica</option>
-      <option>Ar-condicionado</option>
-      <option>Elevador</option>
-      <option>Câmera</option>
-      <option>Infraestrutura>
-      <option>Lampada>
-      <option>Tomada
-      <option>Outro</option>
-    </select>
+    <main>
 
-    <label>Descrição:</label>
-    <textarea placeholder="Descreva o problema"></textarea>
+        <h2>Abertura de Chamado</h2>
 
-    <button type="submit">Enviar chamado</button>
-  </form>
+        <form>
+
+            <label for="nome">Nome do Solicitante</label>
+            <input type="text" id="nome" placeholder="Digite seu nome">
+
+            <label for="setor">Setor</label>
+            <input type="text" id="setor" placeholder="Ex: Coordenação, Laboratório, Sala 12">
+
+            <label for="tipo">Tipo de Problema</label>
+            <select id="tipo">
+                <option value="">Selecione</option>
+                <option>Elétrica</option>
+                <option>Hidráulica</option>
+                <option>Ar-condicionado</option>
+                <option>Câmera</option>
+                <option>Elevador</option>
+                <option>Projetor</option>
+                <option>Ventilador</option>
+                <option>Internet</option>
+                <option>Outro</option>
+            </select>
+
+            <label for="prioridade">Prioridade</label>
+            <select id="prioridade">
+                <option value="">Selecione</option>
+                <option>Baixa</option>
+                <option>Média</option>
+                <option>Alta</option>
+                <option>Urgente</option>
+            </select>
+
+            <label for="descricao">Descrição do Problema</label>
+            <textarea id="descricao" placeholder="Descreva detalhadamente o problema encontrado"></textarea>
+
+            <button type="submit">
+                Abrir Chamado
+            </button>
+
+        </form>
+
+    </main>
+
+    <footer>
+        <p>Coordenação de Planejamento - ICB/UPE</p>
+        <p>SIGMAN v1.0</p>
+    </footer>
+
 </body>
 </html>
