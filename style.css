@@ -1,3 +1,5 @@
+/* RESET */
+
 * {
     margin: 0;
     padding: 0;
@@ -24,7 +26,7 @@ body {
     height: auto;
 }
 
-/* BANNER SIGMAN */
+/* BANNER */
 
 .banner-sigman {
     background: #003b7a;
@@ -35,18 +37,17 @@ body {
 
 .banner-sigman h1 {
     font-size: 3rem;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .banner-sigman p {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
+    font-size: 1.1rem;
 }
 
 /* CONTEÚDO */
 
 main {
-    max-width: 900px;
+    max-width: 1100px;
     margin: 40px auto;
     padding: 0 20px;
 }
@@ -72,7 +73,6 @@ form {
 
 label {
     font-weight: 600;
-    color: #444;
 }
 
 input,
@@ -80,7 +80,7 @@ select,
 textarea {
     width: 100%;
     padding: 12px;
-    border: 1px solid #d4d4d4;
+    border: 1px solid #d6d6d6;
     border-radius: 8px;
     font-size: 15px;
 }
@@ -97,14 +97,13 @@ textarea {
     resize: vertical;
 }
 
-/* BOTÃO */
+/* BOTÕES */
 
 button {
-    margin-top: 10px;
     background: #003b7a;
     color: white;
     border: none;
-    padding: 15px;
+    padding: 14px;
     border-radius: 8px;
     font-size: 16px;
     font-weight: bold;
@@ -114,6 +113,74 @@ button {
 
 button:hover {
     background: #0055b3;
+}
+
+/* TABELA DE CHAMADOS */
+
+table {
+    width: 100%;
+    background: white;
+    border-collapse: collapse;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+thead {
+    background: #003b7a;
+    color: white;
+}
+
+th {
+    padding: 15px;
+    text-align: left;
+}
+
+td {
+    padding: 14px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+tbody tr:hover {
+    background: #f8fafc;
+}
+
+/* STATUS */
+
+.status-aberto {
+    background: #fff3cd;
+    color: #856404;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.status-analise {
+    background: #cfe2ff;
+    color: #084298;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.status-concluido {
+    background: #d1e7dd;
+    color: #0f5132;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* CARDS FUTUROS */
+
+.card {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
 }
 
 /* RODAPÉ */
@@ -144,5 +211,14 @@ footer p {
 
     form {
         padding: 20px;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    th,
+    td {
+        padding: 10px;
     }
 }
