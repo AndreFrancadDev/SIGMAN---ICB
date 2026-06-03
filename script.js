@@ -1,39 +1,62 @@
+const SUPABASE_URL = "https://acuooxhmhjqgdkkkweao.supabase.co";
+const SUPABASE_KEY = "SUA_CHAVE_PUBLICA_AQUI";
 
-const formulario = document.querySelector("form");
+const supabaseClient = supabase.createClient(
+    SUPABASE_URL,
+    SUPABASE_KEY
+);
 
-formulario.addEventListener("submit", function (event) {
+const formulario = document.getElementById("formChamado");
+
+formulario.addEventListener("submit", async (event) => {
+
     event.preventDefault();
 
-    const chamado = {
-        nome: document.getElementById("nome").value,
-        setor: document.getElementById("setor").value,
-        local: document.getElementById("local").value,
-        contato: document.getElementById("contato").value,
-        tipo: document.getElementById("tipo").value,
-        descricao: document.getElementById("descricao").value,
-        status: "Aberto",
-        data: new Date().toLocaleString("pt-BR")
-    };
+    const nome = document.getElementById("nome").value;
+    const setor = document.getElementById("setor").value;
+    const local = document.getElementById("local").value;
+    const contato = document.getElementById("contato").value;
+    const tipo = document.getElementById("tipo").value;
+    const descricao = document.getElementById("descricao").value;
 
     if (
-        chamado.nome === "" ||
-        chamado.setor === "" ||
-        chamado.local === "" ||
-        chamado.contato === "" ||
-        chamado.tipo === "" ||
-        chamado.descricao === ""
+        !nome ||
+        !setor ||
+        !local ||
+        !contato ||
+        !tipo ||
+        !descricao
     ) {
-        alert("Por favor, preencha todos os campos.");
+        alert("Preencha todos os campos obrigatórios.");
         return;
     }
 
-    let chamados = JSON.parse(localStorage.getItem("chamados")) || [];
+    const chamado = {
+        nome,
+        setor,
+        local,
+        contato,
+        tipo,
+        descricao,
+        status: "Aberto"
+    };
 
-    chamados.push(chamado);
+    const { error } = await supabaseClient
+        .from("chamados")
+        .insert([chamado]);
 
-    localStorage.setItem("chamados", JSON.stringify(chamados));
+    if (error) {
+        console.error(error);
+
+        alert(
+            "Erro ao registrar chamado. Verifique a configuração do Supabase."
+        );
+
+        return;
+    }
 
     alert("Chamado aberto com sucesso!");
 
     formulario.reset();
+
 });
