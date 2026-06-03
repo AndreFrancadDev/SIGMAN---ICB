@@ -8,71 +8,66 @@
 </head>
 <body>
 
-    <header>
+<header>
+    <div class="topo-timbre">
+        <img src="timbre-upe.png" alt="Timbre UPE / ICB" class="timbre">
+    </div>
 
-        <div class="topo-timbre">
-            <img src="timbre-upe.png" alt="Timbre UPE / ICB" class="timbre">
-        </div>
+    <div class="banner-sigman">
+        <h1>SIGMAN</h1>
+        <p>Sistema Integrado de Gestão de Manutenção</p>
+        <p>Instituto de Ciências Biológicas - UPE</p>
+    </div>
+</header>
 
-        <div class="banner-sigman">
-            <h1>SIGMAN</h1>
-            <p>Sistema Integrado de Gestão de Manutenção</p>
-            <p>Instituto de Ciências Biológicas - UPE</p>
-        </div>
+<main>
+    <h2>Abertura de Chamado</h2>
 
-    </header>
+    <form>
+        <label for="nome">Nome do Solicitante</label>
+        <input type="text" id="nome" placeholder="Digite seu nome">
 
-    <main>
+        <label for="setor">Setor</label>
+        <input type="text" id="setor" placeholder="Ex: Coordenação, Laboratório, Departamento">
 
-        <h2>Abertura de Chamado</h2>
+        <label for="local">Local Exato</label>
+        <input type="text" id="local" placeholder="Ex: Sala 12, Laboratório de Microbiologia, Anexo B">
 
-        <form>
+        <label for="contato">Telefone ou E-mail para Contato</label>
+        <input type="text" id="contato" placeholder="Informe um contato para retorno">
 
-            <label for="nome">Nome do Solicitante</label>
-            <input type="text" id="nome" placeholder="Digite seu nome">
+        <label for="tipo">Tipo de Problema</label>
+        <select id="tipo">
+            <option value="">Selecione</option>
+            <option>Elétrica</option>
+            <option>Hidráulica</option>
+            <option>Ar-condicionado</option>
+            <option>Câmera</option>
+            <option>Elevador</option>
+            <option>Projetor</option>
+            <option>Ventilador</option>
+            <option>Internet</option>
+            <option>Porta / Fechadura</option>
+            <option>Mobiliário</option>
+            <option>Outro</option>
+        </select>
 
-            <label for="setor">Setor</label>
-            <input type="text" id="setor" placeholder="Ex: Coordenação, Laboratório, Departamento">
+        <label for="arquivo">Foto ou Vídeo do Problema</label>
+        <input type="file" id="arquivo" accept="image/*,video/*">
 
-            <label for="local">Local Exato</label>
-            <input type="text" id="local" placeholder="Ex: Sala 12, Laboratório de Microbiologia, Anexo B">
+        <label for="descricao">Descrição do Problema</label>
+        <textarea id="descricao" placeholder="Descreva detalhadamente o problema encontrado"></textarea>
 
-            <label for="contato">Telefone ou E-mail para Contato</label>
-            <input type="text" id="contato" placeholder="Informe um contato para retorno">
+        <button type="submit">Abrir Chamado</button>
+    </form>
+</main>
 
-            <label for="tipo">Tipo de Problema</label>
-            <select id="tipo">
-                <option value="">Selecione</option>
-                <option>Elétrica</option>
-                <option>Hidráulica</option>
-                <option>Ar-condicionado</option>
-                <option>Câmera</option>
-                <option>Elevador</option>
-                <option>Projetor</option>
-                <option>Ventilador</option>
-                <option>Internet</option>
-                <option>Porta / Fechadura</option>
-                <option>Mobiliário</option>
-                <option>Outro</option>
-            </select>
+<footer>
+    <p>Coordenação de Planejamento - ICB/UPE</p>
+    <p>SIGMAN v1.0</p>
+</footer>
 
-            <label for="descricao">Descrição do Problema</label>
-            <textarea id="descricao" placeholder="Descreva detalhadamente o problema encontrado"></textarea>
-
-            <button type="submit">
-                Abrir Chamado
-            </button>
-
-        </form>
-
-    </main>
-
-    <footer>
-        <p>Coordenação de Planejamento - ICB/UPE</p>
-        <p>SIGMAN v1.0</p>
-    </footer>
-
-    <script src="script.js"></script>
+<script src="script.js"></script>
 
 </body>
 </html>
