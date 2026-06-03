@@ -33,17 +33,30 @@ formulario.addEventListener("submit", async (event) => {
         status: "Aberto"
     };
 
-    const { error } = await supabaseClient
-        .from("chamados")
-        .insert([chamado]);
+    console.log("Enviando chamado:", chamado);
+
+    const { data, error } = await supabaseClient
+        .from("Chamados")
+        .insert([chamado])
+        .select();
 
     if (error) {
-        console.error(error);
-        alert("Erro ao registrar chamado. Verifique a configuração do Supabase.");
+        console.error("Erro completo do Supabase:", error);
+
+        alert(
+            "Não foi possível registrar sua solicitação neste momento. " +
+            "Por favor, tente novamente mais tarde ou entre em contato com a Coordenação de Planejamento."
+        );
+
         return;
     }
 
-    alert("Chamado aberto com sucesso! Sua solicitação será analisada pela Coordenação de Planejamento.");
+    console.log("Chamado registrado com sucesso:", data);
+
+    alert(
+        "Solicitação registrada com sucesso. " +
+        "A Coordenação de Planejamento analisará a demanda e adotará as providências cabíveis."
+    );
 
     formulario.reset();
 });
