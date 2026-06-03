@@ -1,5 +1,3 @@
-/* RESET */
-
 * {
     margin: 0;
     padding: 0;
@@ -12,8 +10,6 @@ body {
     color: #333;
 }
 
-/* TIMBRE */
-
 .topo-timbre {
     background: white;
     text-align: center;
@@ -25,8 +21,6 @@ body {
     max-width: 100%;
     height: auto;
 }
-
-/* BANNER */
 
 .banner-sigman {
     background: #003b7a;
@@ -44,8 +38,6 @@ body {
     font-size: 1.1rem;
 }
 
-/* CONTEÚDO */
-
 main {
     max-width: 1000px;
     margin: 40px auto;
@@ -55,10 +47,8 @@ main {
 main h2 {
     text-align: center;
     color: #003b7a;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
-
-/* CARD */
 
 .card {
     background: white;
@@ -67,7 +57,14 @@ main h2 {
     box-shadow: 0 4px 15px rgba(0,0,0,.08);
 }
 
-/* FORMULÁRIO */
+.aviso {
+    background: #eef5ff;
+    border-left: 5px solid #003b7a;
+    padding: 15px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    line-height: 1.6;
+}
 
 form {
     display: flex;
@@ -101,8 +98,6 @@ textarea:focus {
     border-color: #003b7a;
 }
 
-/* BOTÕES */
-
 button {
     background: #003b7a;
     color: white;
@@ -119,58 +114,6 @@ button:hover {
     background: #0055b3;
 }
 
-/* TABELA */
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    background: white;
-}
-
-thead {
-    background: #003b7a;
-    color: white;
-}
-
-th,
-td {
-    padding: 14px;
-    text-align: left;
-}
-
-tbody tr {
-    border-bottom: 1px solid #ddd;
-}
-
-tbody tr:hover {
-    background: #f8fafc;
-}
-
-/* STATUS */
-
-.status-aberto {
-    color: #856404;
-    background: #fff3cd;
-    padding: 5px 10px;
-    border-radius: 5px;
-}
-
-.status-analise {
-    color: #084298;
-    background: #cfe2ff;
-    padding: 5px 10px;
-    border-radius: 5px;
-}
-
-.status-concluido {
-    color: #0f5132;
-    background: #d1e7dd;
-    padding: 5px 10px;
-    border-radius: 5px;
-}
-
-/* RODAPÉ */
-
 footer {
     margin-top: 50px;
     background: #003b7a;
@@ -179,10 +122,11 @@ footer {
     padding: 20px;
 }
 
-/* RESPONSIVO */
+footer p {
+    margin: 5px 0;
+}
 
 @media (max-width: 768px) {
-
     .banner-sigman h1 {
         font-size: 2rem;
     }
@@ -190,5 +134,4 @@ footer {
     .card {
         padding: 20px;
     }
-
 }
