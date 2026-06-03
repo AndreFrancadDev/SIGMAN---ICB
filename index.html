@@ -4,13 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SIGMAN - ICB/UPE</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
+
     <div class="topo-timbre">
-        <img src="timbre-upe.png" alt="Timbre UPE / ICB" class="timbre">
+        <img
+            src="timbre-upe.png"
+            alt="Timbre UPE"
+            class="timbre">
     </div>
 
     <div class="banner-sigman">
@@ -18,54 +23,139 @@
         <p>Sistema Integrado de Gestão de Manutenção</p>
         <p>Instituto de Ciências Biológicas - UPE</p>
     </div>
+
 </header>
 
 <main>
-    <h2>Abertura de Chamado</h2>
 
-    <form>
-        <label for="nome">Nome do Solicitante</label>
-        <input type="text" id="nome" placeholder="Digite seu nome">
+    <div class="card">
 
-        <label for="setor">Setor</label>
-        <input type="text" id="setor" placeholder="Ex: Coordenação, Laboratório, Departamento">
+        <h2>Abertura de Chamado</h2>
 
-        <label for="local">Local Exato</label>
-        <input type="text" id="local" placeholder="Ex: Sala 12, Laboratório de Microbiologia, Anexo B">
+        <form id="formChamado">
 
-        <label for="contato">Telefone ou E-mail para Contato</label>
-        <input type="text" id="contato" placeholder="Informe um contato para retorno">
+            <label for="nome">
+                Nome do Solicitante
+            </label>
 
-        <label for="tipo">Tipo de Problema</label>
-        <select id="tipo">
-            <option value="">Selecione</option>
-            <option>Elétrica</option>
-            <option>Hidráulica</option>
-            <option>Ar-condicionado</option>
-            <option>Câmera</option>
-            <option>Elevador</option>
-            <option>Projetor</option>
-            <option>Ventilador</option>
-            <option>Internet</option>
-            <option>Porta / Fechadura</option>
-            <option>Mobiliário</option>
-            <option>Outro</option>
-        </select>
+            <input
+                type="text"
+                id="nome"
+                placeholder="Digite seu nome">
 
-        <label for="arquivo">Foto ou Vídeo do Problema</label>
-        <input type="file" id="arquivo" accept="image/*,video/*">
+            <label for="setor">
+                Setor
+            </label>
 
-        <label for="descricao">Descrição do Problema</label>
-        <textarea id="descricao" placeholder="Descreva detalhadamente o problema encontrado"></textarea>
+            <input
+                type="text"
+                id="setor"
+                placeholder="Ex: Coordenação, Laboratório, Departamento">
 
-        <button type="submit">Abrir Chamado</button>
-    </form>
+            <label for="local">
+                Local Exato
+            </label>
+
+            <input
+                type="text"
+                id="local"
+                placeholder="Ex: Sala 12, Laboratório de Microbiologia, Anexo B">
+
+            <label for="contato">
+                Telefone ou E-mail para Contato
+            </label>
+
+            <input
+                type="text"
+                id="contato"
+                placeholder="Informe um contato para retorno">
+
+            <label for="tipo">
+                Tipo de Problema
+            </label>
+
+            <select id="tipo">
+
+                <option value="">
+                    Selecione
+                </option>
+
+                <option>Elétrica</option>
+                <option>Hidráulica</option>
+                <option>Ar-condicionado</option>
+                <option>Câmera</option>
+                <option>Elevador</option>
+                <option>Projetor</option>
+                <option>Ventilador</option>
+                <option>Internet</option>
+                <option>Porta / Fechadura</option>
+                <option>Mobiliário</option>
+                <option>Outro</option>
+
+            </select>
+
+            <label for="arquivo">
+                Foto ou Vídeo do Problema
+            </label>
+
+            <input
+                type="file"
+                id="arquivo"
+                accept="image/*,video/*">
+
+            <label for="descricao">
+                Descrição do Problema
+            </label>
+
+            <textarea
+                id="descricao"
+                placeholder="Descreva detalhadamente o problema encontrado"></textarea>
+
+            <button type="submit">
+                Abrir Chamado
+            </button>
+
+        </form>
+
+    </div>
+
+    <div class="card" style="margin-top:20px; text-align:center;">
+
+        <h3>Painel da Coordenação</h3>
+
+        <p>
+            Visualize e acompanhe os chamados registrados.
+        </p>
+
+        <br>
+
+        <a href="painel.html">
+            <button>
+                Acessar Painel
+            </button>
+        </a>
+
+    </div>
+
 </main>
 
 <footer>
-    <p>Coordenação de Planejamento - ICB/UPE</p>
-    <p>SIGMAN v1.0</p>
+
+    <p>
+        Coordenação de Planejamento - ICB/UPE
+    </p>
+
+    <p>
+        SIGMAN v1.0
+    </p>
+
 </footer>
+
+<!-- SUPABASE -->
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<!-- SCRIPT DO SISTEMA -->
 
 <script src="script.js"></script>
 
