@@ -41,15 +41,23 @@ formulario.addEventListener("submit", async (event) => {
         .select();
 
     if (error) {
-        console.error("Erro completo do Supabase:", error);
 
-        alert(
-            "Não foi possível registrar sua solicitação neste momento. " +
-            "Por favor, tente novamente mais tarde ou entre em contato com a Coordenação de Planejamento."
-        );
+    console.log("========== ERRO SUPABASE ==========");
+    console.log(error);
+    console.log("Código:", error.code);
+    console.log("Mensagem:", error.message);
+    console.log("Detalhes:", error.details);
+    console.log("Hint:", error.hint);
 
-        return;
-    }
+    alert(
+        "ERRO:\n\n" +
+        error.message +
+        "\n\nCódigo: " +
+        error.code
+    );
+
+    return;
+}
 
     console.log("Chamado registrado com sucesso:", data);
 
