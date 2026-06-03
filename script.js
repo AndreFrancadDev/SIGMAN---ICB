@@ -33,33 +33,20 @@ formulario.addEventListener("submit", async (event) => {
         status: "Aberto"
     };
 
-    console.log("Enviando chamado:", chamado);
-
-    const { data, error } = await supabaseClient
+    const { error } = await supabaseClient
         .from("Chamados")
-        .insert([chamado])
-        .select();
+        .insert([chamado]);
 
     if (error) {
+        console.error("Erro ao registrar chamado:", error);
 
-    console.log("========== ERRO SUPABASE ==========");
-    console.log(error);
-    console.log("Código:", error.code);
-    console.log("Mensagem:", error.message);
-    console.log("Detalhes:", error.details);
-    console.log("Hint:", error.hint);
+        alert(
+            "Não foi possível registrar sua solicitação neste momento. " +
+            "Por favor, tente novamente mais tarde ou entre em contato com a Coordenação de Planejamento."
+        );
 
-    alert(
-        "ERRO:\n\n" +
-        error.message +
-        "\n\nCódigo: " +
-        error.code
-    );
-
-    return;
-}
-
-    console.log("Chamado registrado com sucesso:", data);
+        return;
+    }
 
     alert(
         "Solicitação registrada com sucesso. " +
