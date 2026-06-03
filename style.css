@@ -1,6 +1,4 @@
-/* =========================
-   RESET
-========================= */
+/* RESET */
 
 * {
     margin: 0;
@@ -10,13 +8,11 @@
 }
 
 body {
-    background-color: #f4f6f8;
+    background: #f4f6f8;
     color: #333;
 }
 
-/* =========================
-   TIMBRE
-========================= */
+/* TIMBRE */
 
 .topo-timbre {
     background: white;
@@ -30,9 +26,7 @@ body {
     height: auto;
 }
 
-/* =========================
-   BANNER
-========================= */
+/* BANNER */
 
 .banner-sigman {
     background: #003b7a;
@@ -47,13 +41,10 @@ body {
 }
 
 .banner-sigman p {
-    font-size: 1.2rem;
-    margin-bottom: 5px;
+    font-size: 1.1rem;
 }
 
-/* =========================
-   CONTEÚDO
-========================= */
+/* CONTEÚDO */
 
 main {
     max-width: 1000px;
@@ -64,19 +55,21 @@ main {
 main h2 {
     text-align: center;
     color: #003b7a;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 }
 
-/* =========================
-   FORMULÁRIO
-========================= */
+/* CARD */
+
+.card {
+    background: white;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,.08);
+}
+
+/* FORMULÁRIO */
 
 form {
-    background: white;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -84,7 +77,6 @@ form {
 
 label {
     font-weight: 600;
-    color: #444;
 }
 
 input,
@@ -92,9 +84,14 @@ select,
 textarea {
     width: 100%;
     padding: 12px;
-    border: 1px solid #d4d4d4;
+    border: 1px solid #d6d6d6;
     border-radius: 8px;
     font-size: 15px;
+}
+
+textarea {
+    min-height: 140px;
+    resize: vertical;
 }
 
 input:focus,
@@ -104,43 +101,30 @@ textarea:focus {
     border-color: #003b7a;
 }
 
-textarea {
-    min-height: 140px;
-    resize: vertical;
-}
-
-/* =========================
-   BOTÃO
-========================= */
+/* BOTÕES */
 
 button {
-    margin-top: 10px;
     background: #003b7a;
     color: white;
     border: none;
-    padding: 15px;
+    padding: 14px;
     border-radius: 8px;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: bold;
     cursor: pointer;
-    transition: 0.3s;
+    transition: .3s;
 }
 
 button:hover {
     background: #0055b3;
 }
 
-/* =========================
-   TABELAS
-========================= */
+/* TABELA */
 
 table {
     width: 100%;
     border-collapse: collapse;
     background: white;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
 }
 
 thead {
@@ -155,44 +139,37 @@ td {
 }
 
 tbody tr {
-    border-bottom: 1px solid #e5e7eb;
+    border-bottom: 1px solid #ddd;
 }
 
 tbody tr:hover {
     background: #f8fafc;
 }
 
-/* =========================
-   STATUS
-========================= */
+/* STATUS */
 
 .status-aberto {
-    background: #fff3cd;
     color: #856404;
+    background: #fff3cd;
     padding: 5px 10px;
-    border-radius: 6px;
-    font-weight: bold;
+    border-radius: 5px;
 }
 
 .status-analise {
-    background: #cfe2ff;
     color: #084298;
+    background: #cfe2ff;
     padding: 5px 10px;
-    border-radius: 6px;
-    font-weight: bold;
+    border-radius: 5px;
 }
 
 .status-concluido {
-    background: #d1e7dd;
     color: #0f5132;
+    background: #d1e7dd;
     padding: 5px 10px;
-    border-radius: 6px;
-    font-weight: bold;
+    border-radius: 5px;
 }
 
-/* =========================
-   RODAPÉ
-========================= */
+/* RODAPÉ */
 
 footer {
     margin-top: 50px;
@@ -202,13 +179,7 @@ footer {
     padding: 20px;
 }
 
-footer p {
-    margin: 5px 0;
-}
-
-/* =========================
-   RESPONSIVO
-========================= */
+/* RESPONSIVO */
 
 @media (max-width: 768px) {
 
@@ -216,16 +187,8 @@ footer p {
         font-size: 2rem;
     }
 
-    .banner-sigman p {
-        font-size: 1rem;
-    }
-
-    form {
+    .card {
         padding: 20px;
     }
 
-    table {
-        display: block;
-        overflow-x: auto;
-    }
 }
